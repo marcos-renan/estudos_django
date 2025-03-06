@@ -42,7 +42,7 @@ DJANGO_APPS = [
 PROJETO_APPS = [
     'apps.Burgueria',
 ]
-#juncao dos apps na variavel do proprio django para reconhecer os apps
+#juncao dos apps na variavel 'INSTALLED_APPS' (do proprio django) para reconhecer os apps
 INSTALLED_APPS = DJANGO_APPS + PROJETO_APPS
 
 MIDDLEWARE = [

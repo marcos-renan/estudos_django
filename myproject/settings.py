@@ -29,8 +29,8 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
-INSTALLED_APPS = [
+#apps do django
+DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,6 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+#apps que eu criei
+PROJETO_APPS = [
+    'apps.Burgueria',
+]
+#juncao dos apps na variavel do proprio django para reconhecer os apps
+INSTALLED_APPS = DJANGO_APPS + PROJETO_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

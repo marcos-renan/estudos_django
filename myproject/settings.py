@@ -29,6 +29,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+
 #apps do django
 DJANGO_APPS = [
     'django.contrib.admin',
@@ -38,10 +39,12 @@ DJANGO_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
 #apps que eu criei
 PROJETO_APPS = [
     'apps.Burgueria',
 ]
+
 #juncao dos apps na variavel 'INSTALLED_APPS' (do proprio django) para reconhecer os apps
 INSTALLED_APPS = DJANGO_APPS + PROJETO_APPS
 

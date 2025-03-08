@@ -11,5 +11,6 @@ class Sanduiche(models.Model):
     preco = models.DecimalField(max_digits=10, decimal_places=2, verbose_name="Preço", help_text="Valor do sanduiche em R$")
     emPromocao = models.BooleanField(default=False, verbose_name="Em promoção", help_text="Marque se está em promoção")
     
-    
+    def __str__(self):
+        return self.nome
     

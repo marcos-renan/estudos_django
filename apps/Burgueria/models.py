@@ -6,5 +6,6 @@ class Sanduiche(models.Model):
     """
         Modelo que representa um sanduiche no banco de dados   
     """    
-    nome = models.CharField(max_length=100),
+    nome = models.CharField(max_length=100, verbose_name="Nome do Sanduiche")
+    descricao = models.TextField(verbose_name="Descrição", help_text="Descreva os ingredientes e caracteristicas do sanduiche.")
     

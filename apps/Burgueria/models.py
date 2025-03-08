@@ -10,6 +10,7 @@ class Sanduiche(models.Model):
     descricao = models.TextField(verbose_name="Descrição", help_text="Descreva os ingredientes e caracteristicas do sanduiche.")
     preco = models.DecimalField(max_digits=10, decimal_places=2, verbose_name="Preço", help_text="Valor do sanduiche em R$")
     emPromocao = models.BooleanField(default=False, verbose_name="Em promoção", help_text="Marque se está em promoção")
+    imagem = models.ImageField(upload_to="media/", verbose_name="Imagem do sanduiche", help_text="Faça o upload da imagem do sanduiche.")
     
     def __str__(self):
         return self.nome

@@ -14,3 +14,19 @@ class Sanduiche(models.Model):
     def __str__(self):
         return self.nome
     
+    
+class InfoNutricional(models.Model):
+    """
+        Modelo que armazena as informações nutricionais dos sanduiches
+    """
+    sanduiche = models.OneToOneField(Sanduiche, on_delete=models.CASCADE)
+    calorias = models.PositiveIntegerField(verbose_name="Calorias (kcal)")
+    proteinas = models.DecimalField(max_digits=5, decimal_places=2, verbose_name="Proteinas (g)")
+    gorduras = models.DecimalField(max_digits=5, decimal_places=2, verbose_name="Gorduras (g)")
+    carboidratos = models.DecimalField(max_digits=5, decimal_places=2, verbose_name="Carboidratos (g)")
+    gorduras_saturadas = models.DecimalField(max_digits=5, decimal_places=2, verbose_name="Gorduras saturadas (g)")
+    gorduras_trans = models.DecimalField(max_digits=5, decimal_places=2, verbose_name="Gorduras Trans (g)")
+    sodio = models.PositiveIntegerField(verbose_name="Sódio (mg)")
+    
+    def __str__(self):
+        return f"Informações nutricionais de {self.sanduiche.nome}"
